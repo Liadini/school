@@ -14,15 +14,15 @@ public class GPACalculator {
 		double finalGPA = 0;
 		int gradeTotal = 0;
 		for (int x = 0; x < loopTimes; x++) {
-			if (grade[x].equalsIgnoreCase("A"))
+			if ("A".equalsIgnoreCase(grade[x]))
 				gradeTotal += 4;
-			else if (grade[x].equalsIgnoreCase("B"))
+			else if ("B".equalsIgnoreCase(grade[x]))
 				gradeTotal += 3;
-			else if (grade[x].equalsIgnoreCase("C"))
+			else if ("C".equalsIgnoreCase(grade[x]))
 				gradeTotal += 2;
-			else if (grade[x].equalsIgnoreCase("D"))
+			else if ("D".equalsIgnoreCase(grade[x]))
 				gradeTotal += 1;
-			else if (grade[x].equalsIgnoreCase("F"))
+			else if ("F".equalsIgnoreCase(grade[x]))
 				gradeTotal += 0;
 		}
 		finalGPA = (double) gradeTotal / (double) loopTimes;
