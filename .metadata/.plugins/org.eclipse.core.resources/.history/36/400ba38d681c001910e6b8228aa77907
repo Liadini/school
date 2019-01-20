@@ -28,51 +28,61 @@ public class DogYears {
 		return (int) dog - 1;
 	}
 
-	public double convertToCelsius(double fahrenheit) { // converts from fahrenheit to celsius
+	public double convertToCelsius(int fahrenheit) { // converts from fahrenheit to celsius
 		double celsius = (fahrenheit - 32.0) * 5.0 / 9.0;
-		return Math.round(celsius * 100.0) / 100.0;
+		return celsius;
 	}
 
-	public double convertToFahrenheit(double celsius) { // converts from celsius to fahrenheit
+	public double convertToFahrenheit(int celsius) { // converts from celsius to fahrenheit
 		double fahrenheit = celsius * 9.0 / 5.0 + 32.0;
-		return Math.round(fahrenheit * 100.0) / 100.0;
+		return fahrenheit;
 	}
 
 	public static void main(String[] args) { // takes in the user input and does the conversion
 		Scanner kboard = new Scanner(System.in);
-		DogYears converter = new DogYears();
 		System.out.println("Enter '1' for dog years to human years!");
 		System.out.println("Enter '2' for human years to dog years!");
 		System.out.println("Enter '3' for fahrenheit to celsius!");
 		System.out.println("Enter '4' for celsius to fahrenheit!");
 		int choice = kboard.nextInt();
 
-		switch (choice) {
-		case 1:
+		if (choice == 1) {
+			Scanner keyboard = new Scanner(System.in);
 			System.out.print("Enter a dog age ----->");
-			int dog = kboard.nextInt();
+			int dog = keyboard.nextInt();
+			DogYears converter = new DogYears();
 			int human = converter.convertToHumanYears(dog);
 			System.out.println(dog + " dog years is " + human + " human years");
-			break;
-		case 2:
-			System.out.print("Enter a human age ----->");
-			human = kboard.nextInt();
-			dog = converter.convertToDogYears(human);
+		}
+
+		if (choice == 2) {
+			Scanner keyboard = new Scanner(System.in);
+			System.out.print("Enter a human age ----->"); // human --> dog
+			int human = keyboard.nextInt(); // human --> dog
+			DogYears converter = new DogYears();
+			int dog = converter.convertToDogYears(human); // human --> dog
 			System.out.println(human + " human years is " + dog + " dog years");
-			break;
-		case 3:
+		}
+
+		if (choice == 3) {
+			Scanner keyboard = new Scanner(System.in);
 			System.out.print("Enter a temperature in fahrenheit ----->");
-			double fahrenheit = kboard.nextDouble();
+			int fahrenheit = keyboard.nextInt();
+			DogYears converter = new DogYears();
 			double celsius = converter.convertToCelsius(fahrenheit);
 			System.out.println(fahrenheit + " degrees fahrenheit is " + celsius + " degrees celsius");
-			break;
-		case 4:
+		}
+
+		if (choice == 4) {
+			Scanner keyboard = new Scanner(System.in);
 			System.out.print("Enter a temperature in celsius ----->");
-			celsius = kboard.nextInt();
-			fahrenheit = converter.convertToFahrenheit(celsius);
+			int celsius = keyboard.nextInt();
+			DogYears converter = new DogYears();
+			double fahrenheit = converter.convertToFahrenheit(celsius);
 			System.out.println(celsius + " degrees celsius is " + fahrenheit + " degrees fahrenheit");
-			break;
-		default:
+		}
+
+		if (choice > 4) {
 			System.out.println("That wasn't one of the choices, silly!");
 		}
 	}

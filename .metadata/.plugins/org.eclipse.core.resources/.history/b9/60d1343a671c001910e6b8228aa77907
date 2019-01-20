@@ -14,8 +14,8 @@ import java.util.Scanner;
 public class ConditionTesterMenu {
 
 	public static void main(String[] args) {
-		Scanner kboard = new Scanner(System.in);
-		ConditionTester tester = new ConditionTester();
+		Scanner keyboard = new Scanner(System.in);
+
 		System.out.println("Enter '1' to test if a specified point falls inside of a specified rectangle!");
 		System.out.println("Enter '2' to test if a specified year ends up being a leap year!");
 		System.out.println("Enter '3' to test if a specified number end in two zeroes (no more, no less)!");
@@ -24,10 +24,12 @@ public class ConditionTesterMenu {
 		System.out.println("Enter '6' to find the best color match for a specified RGB spectrum!");
 		System.out.println("Enter '7' to find if two specified files fit on a specified disk!");
 
-		int num = kboard.nextInt();
+		int num = keyboard.nextInt();
 
 		switch (num) {
 		case 1:
+			Scanner kboard = new Scanner(System.in);
+
 			System.out.print("Enter the x-value of the point --> ");
 			int choice1 = kboard.nextInt();
 
@@ -46,7 +48,9 @@ public class ConditionTesterMenu {
 			System.out.print("Enter the height of the rectangle --> ");
 			int choice6 = kboard.nextInt();
 
-			boolean bResult = tester.isPointInRectangle(choice1, choice2, choice3, choice4, choice5, choice6);
+			ConditionTester tester = new ConditionTester();
+			boolean bResult = tester.isPointInRectangle(choice1, choice2, choice3, choice4, choice5,
+					choice6);
 
 			System.out.println("The result of the test: " + bResult);
 			break;

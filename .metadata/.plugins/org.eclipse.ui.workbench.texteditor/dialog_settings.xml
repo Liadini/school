@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
+		<item value="false" key="isRegEx"/>
+		<item value="number" key="selection"/>
+		<item value="false" key="casesensitive"/>
+		<item value="false" key="incremental"/>
+		<item value="true" key="wrap"/>
+		<item value="false" key="wholeword"/>
+		<list key="findhistory">
+			<item value="caseber"/>
+			<item value="result7"/>
+			<item value="result6"/>
+			<item value="result5"/>
+			<item value="result4"/>
+			<item value="result3"/>
+			<item value="result2"/>
+			<item value="result1"/>
+			<item value="case7num"/>
+			<item value="case6num"/>
+			<item value="case5num"/>
+			<item value="case4num"/>
+			<item value="case3num"/>
+			<item value="case2num"/>
+			<item value="case1num"/>
+		</list>
+		<list key="replacehistory">
+			<item value="number"/>
+			<item value="result"/>
+			<item value="choice"/>
+		</list>
+	</section>
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
+		<item value="337" key="DIALOG_WIDTH"/>
+		<item value="1|Noto Sans|9.0|0|GTK|1|" key="DIALOG_FONT_NAME"/>
+		<item value="445" key="DIALOG_HEIGHT"/>
+		<item value="585" key="DIALOG_X_ORIGIN"/>
+		<item value="185" key="DIALOG_Y_ORIGIN"/>
+	</section>
+</section>

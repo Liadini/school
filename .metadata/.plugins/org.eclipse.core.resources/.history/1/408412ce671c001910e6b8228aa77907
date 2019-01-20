@@ -14,50 +14,58 @@ public class ConditionTester {
 	// This method tests if the points x and y fit in the specified rectangle, then
 	// returns the result of the test
 	public boolean isPointInRectangle(int x, int y, int rectX, int rectY, int rectWidth, int rectHeight) {
+		boolean result;
 		if ((x >= rectX && x <= rectWidth - 1 + rectX) && (y >= rectY && y <= rectHeight - 1 + rectY)) {
-			return true;
+			result = true;
 		} else {
-			return false;
+			result = false;
 		}
+		return result;
 	}
 
 	// This method tests if the specified year is a leap year, then returns the
 	// result
 	public boolean isLeapYear(int year) {
+		boolean result;
 		if (year % 4 == 0 && (year % 100 != 0 || year % 400 == 0)) {
-			return true;
+			result = true;
 		} else {
-			return false;
+			result = false;
 		}
+		return result;
 	}
 
 	// This method tests if the specified number has two ending zeroes (no more, no
 	// less), then returns the result
 	public boolean hasTwoEndingZeros(int x) {
+		boolean result;
 		if (x % 100 == 0 && x % 1000 != 0) {
-			return true;
+			result = true;
 		} else {
-			return false;
+			result = false;
 		}
+		return result;
 	}
 
 	// This method tests if the first specified date is later than the second
 	// specified date
 	public boolean isLater(int month1, int day1, int year1, int month2, int day2, int year2) {
+		boolean result;
 		if (year1 > year2)
-			return true;
+			result = true;
 		else if (year1 == year2) {
 			if (month1 > month2)
-				return true;
+				result = true;
 			else if (month1 == month2) {
 				if (day1 > day2)
-					return true;
+					result = true;
 				else
-					return false;
+					result = false;
 			} else
-				return false;
+				result = false;
 		} else
-			return false;
+			result = false;
+		return result;
 	}
 
 	// This method finds the total cost of a certain number of 2 different textbooks

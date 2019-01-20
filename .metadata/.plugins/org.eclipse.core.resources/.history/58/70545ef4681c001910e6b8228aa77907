@@ -60,10 +60,11 @@ public class Wages extends JFrame implements ActionListener {
 
 	// Finds the total wages based on hours worked and rate per hour
 	public double totalWages(double hours, double rate) {
-		if (rate > 23 && rate < 25)
-			System.out.println("Your rate per hour is about average in the United States!");
-		if (hours > 34.4)
+		if (rate > 23 && rate < 25) {
+				System.out.println("Your rate per hour is about average in the United States!");
+		if (hours > 34.4) {
 			System.out.println("You work longer every week than the average American!");
+		}
 		double wages;
 		if (hours < 40) {
 			wages = hours * rate;

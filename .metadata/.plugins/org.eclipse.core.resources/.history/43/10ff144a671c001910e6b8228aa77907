@@ -15,7 +15,7 @@ public class ConditionTesterMenu {
 
 	public static void main(String[] args) {
 		Scanner kboard = new Scanner(System.in);
-		ConditionTester tester = new ConditionTester();
+
 		System.out.println("Enter '1' to test if a specified point falls inside of a specified rectangle!");
 		System.out.println("Enter '2' to test if a specified year ends up being a leap year!");
 		System.out.println("Enter '3' to test if a specified number end in two zeroes (no more, no less)!");
@@ -46,7 +46,9 @@ public class ConditionTesterMenu {
 			System.out.print("Enter the height of the rectangle --> ");
 			int choice6 = kboard.nextInt();
 
-			boolean bResult = tester.isPointInRectangle(choice1, choice2, choice3, choice4, choice5, choice6);
+			ConditionTester tester = new ConditionTester();
+			boolean bResult = tester.isPointInRectangle(choice1, choice2, choice3, choice4, choice5,
+					choice6);
 
 			System.out.println("The result of the test: " + bResult);
 			break;
