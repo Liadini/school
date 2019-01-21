@@ -41,10 +41,13 @@ public class DogYears {
 	public static void main(String[] args) { // takes in the user input and does the conversion
 		Scanner kboard = new Scanner(System.in);
 		DogYears converter = new DogYears();
+		boolean shouldContinue = true;
+		do {
 		System.out.println("Enter '1' for dog years to human years!");
 		System.out.println("Enter '2' for human years to dog years!");
 		System.out.println("Enter '3' for fahrenheit to celsius!");
 		System.out.println("Enter '4' for celsius to fahrenheit!");
+		System.out.println("Enter '5' to quit!");
 		int choice = kboard.nextInt();
 
 		switch (choice) {
@@ -72,9 +75,14 @@ public class DogYears {
 			fahrenheit = converter.convertToFahrenheit(celsius);
 			System.out.println(celsius + " degrees celsius is " + fahrenheit + " degrees fahrenheit");
 			break;
+		case 5:
+			kboard.close();
+			shouldContinue = false;
+			break;
 		default:
 			System.out.println("That wasn't one of the choices, silly!");
 		}
+		} while (shouldContinue);
 	}
 
 }
