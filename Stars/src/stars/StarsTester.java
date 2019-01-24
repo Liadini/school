@@ -25,6 +25,13 @@ public class StarsTester {
 				starTester.printStarSquare(kboard.nextInt());
 				Thread.sleep(1000);
 				break;
+			case "GRID":
+			case "GRD":
+			case "G":
+				System.out.print("What should be the side length of the grid? ---> ");
+				starTester.printStarGrid(kboard.nextInt());
+				Thread.sleep(1000);
+				break;
 			case "TRIANGLE":
 			case "TRI":
 			case "TR":
@@ -44,11 +51,23 @@ public class StarsTester {
 				Thread.sleep(1000);
 				break;
 			case "PYRAMID":
+			case "PRMD":
+			case "PMD":
 			case "PYR":
 			case "PY":
 			case "P":
 				System.out.print("How many rows in the pyramid? ---> ");
-//				starTester.printStarPyramid(kboard.nextInt());
+				starTester.printStarPyramid(kboard.nextInt());
+				Thread.sleep(1000);
+				break;
+			case "DIAMOND":
+			case "DIAM":
+			case "DMND":
+			case "DMN":
+			case "DM":
+			case "D":
+				System.out.print("What will the height of the diamond be? ---> ");
+				starTester.printStarDiamond(kboard.nextInt());
 				Thread.sleep(1000);
 				break;
 			case "QUIT":
@@ -60,7 +79,7 @@ public class StarsTester {
 				kboard.close();
 				break;
 			default:
-				System.out.println("That wasn't an option. Try again!");
+				System.out.println("That wasn't an option. Try again!\n");
 				break;
 			}
 		} while (shouldContinue);
