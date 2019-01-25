@@ -1,5 +1,13 @@
 package stars;
 
+/*
+ * Lab 25 for Mr. Taylor's Java Class
+ * Author: Liad Hermelin
+ * Date: December 22, 2018
+ * Description: This lab represents a shape creator, using for loops.
+ * Revision 2.1
+*/
+
 public class Stars {
 
 	public void printStars(int n) {
@@ -37,7 +45,7 @@ public class Stars {
 		}
 		System.out.println();
 	}
-
+	
 	public void printStarTriangle(int n) {
 		int row = 0;
 		for (int i = 0; i < n; i++) {
