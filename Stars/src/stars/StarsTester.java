@@ -12,6 +12,7 @@ import java.util.Scanner;
 
 public class StarsTester {
 
+	// The menu for the stars lab
 	public static void main(String[] args) throws InterruptedException {
 		Stars starTester = new Stars();
 		Scanner kboard = new Scanner(System.in);

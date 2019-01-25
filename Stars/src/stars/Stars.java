@@ -10,6 +10,7 @@ package stars;
 
 public class Stars {
 
+	// prints a line of stars
 	public void printStars(int n) {
 		for (int i = 0; i < n; i++) {
 			System.out.print("*");
@@ -17,6 +18,7 @@ public class Stars {
 		System.out.println("\n");
 	}
 
+	// prints a square of stars
 	public void printStarSquare(int n) {
 		int row = 0;
 		for (int i = 0; i < n; i++) {
@@ -29,6 +31,7 @@ public class Stars {
 		System.out.println();
 	}
 
+	// prints a grid of stars
 	public void printStarGrid(int n) {
 		int row = 0;
 		boolean odd = true;
@@ -46,6 +49,7 @@ public class Stars {
 		System.out.println();
 	}
 	
+	// prints a triangle of stars
 	public void printStarTriangle(int n) {
 		int row = 0;
 		for (int i = 0; i < n; i++) {
@@ -58,6 +62,7 @@ public class Stars {
 		System.out.println();
 	}
 
+	// prints an inverted triangle of stars
 	public void printStarInvertedTriangle(int n) {
 		for (int i = n; i > 0; i--) {
 			for (int b = 0; b < i - 1; b++) {
@@ -72,6 +77,7 @@ public class Stars {
 		System.out.print("\n");
 	}
 
+	// prints a pyramid of stars
 	public void printStarPyramid(int n) {
 		for (int i = n; i > 0; i--) {
 			for (int b = 0; b < i - 1; b++) {
@@ -94,6 +100,7 @@ public class Stars {
 		System.out.print("\n");
 	}
 
+	// prints a diamond of stars
 	public void printStarDiamond(int n) {
 		if (n % 2 == 0) {
 			for (int i = 1; i < n; i += 2) {
