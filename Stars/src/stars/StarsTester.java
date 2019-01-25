@@ -6,7 +6,8 @@ import java.util.Scanner;
  * Lab 25 for Mr. Taylor's Java Class
  * Author: Liad Hermelin
  * Date: December 22, 2018
- * Description: This lab represents a shape creator, using for loops.
+ * Description: This lab represents a shape creator, using for loops. I experimented on lines 34 - 49 of the Stars.java file, 
+ * by adding a grid.
  * Revision 2.1
 */
 
