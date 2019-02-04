@@ -4,7 +4,8 @@ package stringtoolbox;
  * Lab 26 for Mr. Taylor's Java Class
  * Author: Liad Hermelin
  * Date: February 1, 2019
- * Description: This lab represents a tester for String methods.
+ * Description: This lab represents a tester for String methods. For my experimentation, I changed
+ * as many methods as I could to only include a single return statement (but kept the original solution).
  * Revision 2.1
 */
 
