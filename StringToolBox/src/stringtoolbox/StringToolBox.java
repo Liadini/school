@@ -10,7 +10,7 @@ package stringtoolbox;
 */
 
 public class StringToolBox {
-	
+
 	// returns firstname [space] capital LASTNAME
 	public String nameEcho(String s) {
 		return s.substring(0, s.indexOf(" ")) + s.substring(s.indexOf(" ")).toUpperCase();
@@ -19,7 +19,7 @@ public class StringToolBox {
 //		lastName = lastName.toUpperCase();
 //		return firstName + lastName;
 	}
-	
+
 	// true if specified string ends with a star
 	public boolean endsWithStar(String s) {
 		return (s.length() > 0 && s.endsWith("*"));
@@ -56,4 +56,52 @@ public class StringToolBox {
 //		String firstName = s.substring(commaIndex + 1);
 //		return firstName + " " + lastName;
 	}
+
+	public String removeDashes(String s) {
+		return s.replace("-", "");
+	}
+
+	public String dateStr(String s) {
+//		return s.substring(s.indexOf("/") + 1, s.indexOf("/", s.indexOf("/") + 1)) + "-"
+//				+ s.substring(0, s.indexOf("/")) + "-" + s.substring(s.indexOf("/", s.indexOf("/") + 1) + 1); // doesn't work with added zeros
+		int firstSlashIndex = s.indexOf("/");
+		int secondSlashIndex = s.indexOf("/", firstSlashIndex + 1);
+		String mm = s.substring(0, firstSlashIndex);
+		String dd = s.substring(firstSlashIndex + 1, secondSlashIndex);
+		String yyyy = s.substring(secondSlashIndex + 1);
+		if (mm.length() < 2)
+			mm = "0" + mm;
+		if (dd.length() < 2)
+			dd = "0" + dd;
+		return dd + "-" + mm + "-" + yyyy;
+	}
+
+	public String negativeBits(String s) {
+		return s.replace("0", "a").replace("1", "0").replace("a", "1").trim();
+//		s = s.replace("0", "a");
+//		s = s.replace("1", "b");
+//		s = s.replace("a", "1");
+//		s = s.replace("b", "0");
+//		return s.trim();
+	}
+	
+	public boolean containsSameChar(String s) {
+		return s.length() - s.replaceAll(s.charAt(0) + "", "").length() == s.length();
+//		String char = s.charAt(0) + "";
+//		int count = s.length() - s.replaceAll(char,"").length();
+//		return count == s.length();
+	}
+	
+	public String removeComments(String s) {
+		if (!s.contains("/*") || !s.contains("*/"))
+			return s;
+		else {
+			return s.replace(s.substring(s.indexOf("/*"), s.indexOf("*/") + 2), "").replace("  ", " ");
+//			int firstIndex = s.indexOf("/*");
+//			int lastIndex = s.indexOf("*/");
+//			String remove = s.substring(firstIndex, lastIndex + 2);
+//			return s.replace(remove, "").replace("  ", " ");
+		}
+	}
+
 }

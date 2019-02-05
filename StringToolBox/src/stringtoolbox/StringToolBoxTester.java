@@ -38,7 +38,26 @@ public class StringToolBoxTester {
 
 		System.out.println("***Testing: String convertName(String s)***");
 		System.out.println("Albert Einstein = " + stringTool.convertName("Einstein, Albert"));
-
+		
+		System.out.println("***Testing: String removeDashes(String s)***");
+		System.out.println("987654321 = " + stringTool.removeDashes("987-65-4321"));
+		
+		System.out.println("***Testing: String dateStr(String s)***");
+		System.out.println("31-05-2019 = " + stringTool.dateStr("05/31/2019"));
+		System.out.println("03-05-2019 = " + stringTool.dateStr("5/3/2019"));
+		
+		System.out.println("***Testing: String negativeBits(String s)***");
+		System.out.println("100001111000 = " + stringTool.negativeBits("011110000111"));
+		System.out.println("01010 = " + stringTool.negativeBits("   10101      "));
+		
+		System.out.println("***Testing: String containsSameChar(String s)***");
+		System.out.println("true = " + stringTool.containsSameChar("dddddddd"));
+		System.out.println("false = " + stringTool.containsSameChar("Ccccccc"));
+		System.out.println("false = " + stringTool.containsSameChar("vbnnnnn"));
+		
+		System.out.println("***Testing: String removeComments(String s)***");
+		System.out.println("John was a good man = " + stringTool.removeComments("John was /*not*/ a good man"));
+		System.out.println("John was a good man = " + stringTool.removeComments("John was a good man"));
 	}
 
 }
