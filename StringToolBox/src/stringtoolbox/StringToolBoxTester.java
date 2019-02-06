@@ -11,6 +11,7 @@ package stringtoolbox;
 
 public class StringToolBoxTester {
 
+	// tester method for StringToolBox
 	public static void main(String[] args) {
 
 		StringToolBox stringTool = new StringToolBox();

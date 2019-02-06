@@ -29,6 +29,7 @@ public class StringToolBox {
 //			return false;
 	}
 
+	// true if specified string ends with two stars
 	public boolean endsWithTwoStars(String s) {
 		return (s.length() > 1 && s.endsWith("**"));
 //		if (s.length() > 1)
@@ -37,18 +38,22 @@ public class StringToolBox {
 //			return false;
 	}
 
+	// returns last 4 characters of specified string
 	public String last4(String s) {
 		return s.substring(s.length() - 5);
 	}
 
+	// returns last 5 characters of specified string
 	public String last5(String s) {
 		return s.substring(s.length() - 6).replace(" ", "");
 	}
 
+	// returns specified string with first letter moved to the end
 	public String scroll(String s) {
 		return s.substring(1) + s.substring(0, 1);
 	}
 
+	// takes lastname, firstname and converts it to firstname lastname
 	public String convertName(String s) {
 		return s.substring(s.indexOf(",") + 1) + " " + s.substring(0, s.indexOf(","));
 //		int commaIndex = s.indexOf(",");
@@ -57,10 +62,12 @@ public class StringToolBox {
 //		return firstName + " " + lastName;
 	}
 
+	// removes all dashes from specified string
 	public String removeDashes(String s) {
 		return s.replace("-", "");
 	}
 
+	// converts mm/dd/yyyy to dd-mm-yyyy
 	public String dateStr(String s) {
 //		return s.substring(s.indexOf("/") + 1, s.indexOf("/", s.indexOf("/") + 1)) + "-"
 //				+ s.substring(0, s.indexOf("/")) + "-" + s.substring(s.indexOf("/", s.indexOf("/") + 1) + 1); // doesn't work with added zeros
@@ -76,6 +83,7 @@ public class StringToolBox {
 		return dd + "-" + mm + "-" + yyyy;
 	}
 
+	// switches 0s and 1s
 	public String negativeBits(String s) {
 		return s.replace("0", "a").replace("1", "0").replace("a", "1").trim();
 //		s = s.replace("0", "a");
@@ -85,6 +93,7 @@ public class StringToolBox {
 //		return s.trim();
 	}
 	
+	// returns true if all characters in specified string are the same
 	public boolean containsSameChar(String s) {
 		return s.length() - s.replaceAll(s.charAt(0) + "", "").length() == s.length();
 //		String char = s.charAt(0) + "";
@@ -92,6 +101,7 @@ public class StringToolBox {
 //		return count == s.length();
 	}
 	
+	// removes any /*...*/ comments from specified string
 	public String removeComments(String s) {
 		if (!s.contains("/*") || !s.contains("*/"))
 			return s;
