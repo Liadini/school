@@ -14,6 +14,7 @@ import javax.swing.JPanel;
  */
 
 public class ControlPanel extends JPanel implements ActionListener {
+	private static final long serialVersionUID = -3117442342866334971L;
 	private CrapsTable table;
 
 	public ControlPanel(CrapsTable paramCrapsTable) {

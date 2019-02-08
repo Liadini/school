@@ -14,7 +14,8 @@ import java.util.Scanner;
 */
 
 public class IntroLoops {
-
+	public static Scanner kboard = new Scanner(System.in);
+	
 	// divide (m=numerator, n=denominator)
 	public void divide(int numerator, int denominator) {
 		int quotient = 0, remainder = 0, sum = 0;
@@ -76,11 +77,10 @@ public class IntroLoops {
 		int[] numberArray = new int[25];
 		String[] stringArray = new String[25];
 		int i = 0, sum = 0;
-		Scanner keyboard = new Scanner(System.in);
 
 		do {
 			System.out.print("Enter a number/command ---> ");
-			stringArray[i] = keyboard.next();
+			stringArray[i] = kboard.next();
 			if (isInteger(stringArray[i])) {
 				numberArray[i] = Integer.parseInt(stringArray[i]);
 				sum += numberArray[i];
@@ -101,11 +101,10 @@ public class IntroLoops {
 		int[] numberArray = new int[25];
 		String[] stringArray = new String[25];
 		int i = 0, sum = 0;
-		Scanner keyboard = new Scanner(System.in);
 
 		do {
 			System.out.print("Enter a number/command ---> ");
-			stringArray[i] = keyboard.next();
+			stringArray[i] = kboard.next();
 			if (isInteger(stringArray[i])) {
 				numberArray[i] = Integer.parseInt(stringArray[i]);
 				sum += numberArray[i];
@@ -133,10 +132,10 @@ public class IntroLoops {
 	public void findStandardDeviation(int[] intArray, int num) {
 		int sum = 0, squareSum = 0;
 		double average = 0, squareAverage = 0;
-		Scanner s = new Scanner(System.in);
+		
 		for (int i = 0; i < num; i++) {
 			System.out.print("Number " + (i + 1) + " -----> ");
-			intArray[i] = s.nextInt();
+			intArray[i] = kboard.nextInt();
 			sum += intArray[i];
 			squareSum += intArray[i] * intArray[i];
 		}
@@ -153,10 +152,10 @@ public class IntroLoops {
 
 	// checks if a string is an integer
 	public static boolean isInteger(String s, int radix) {
-		Scanner sc = new Scanner(s.trim());
-		if (!sc.hasNextInt(radix))
+		kboard = new Scanner(s.trim());
+		if (!kboard.hasNextInt(radix))
 			return false;
-		sc.nextInt(radix);
-		return !sc.hasNext();
+		kboard.nextInt(radix);
+		return !kboard.hasNext();
 	}
 }

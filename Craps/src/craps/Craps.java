@@ -15,6 +15,8 @@ import javax.swing.border.EmptyBorder;
  */
 
 public class Craps extends JFrame {
+	private static final long serialVersionUID = -3328880249914971324L;
+
 	public Craps() {
 		super("Craps");
 

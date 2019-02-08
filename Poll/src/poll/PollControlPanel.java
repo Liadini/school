@@ -15,9 +15,9 @@ import javax.swing.JPanel;
  * Revision 2.1
 */
 
-public class PollControlPanel extends JPanel implements ActionListener
+public class PollControlPanel extends JPanel implements ActionListener {
 
-{
+	private static final long serialVersionUID = -6959564127295460881L;
 	private JButton button1, button2, button3;
 	private PollDisplayPanel chartPanel;
 

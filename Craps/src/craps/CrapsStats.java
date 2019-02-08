@@ -17,6 +17,7 @@ import javax.swing.JTextField;
  */
 
 public class CrapsStats extends JFrame implements ActionListener {
+	private static final long serialVersionUID = -8205165399698249392L;
 	private CrapsGame game;
 	private JTextField numberIn;
 	private JTextField statsOut;

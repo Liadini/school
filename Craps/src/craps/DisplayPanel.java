@@ -17,6 +17,7 @@ import javax.swing.border.EmptyBorder;
  */
 
 public class DisplayPanel extends JPanel {
+	private static final long serialVersionUID = 2952741564970466120L;
 	private JTextField wonText;
 	private JTextField lostText;
 	private JTextField pointText;

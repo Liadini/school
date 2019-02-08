@@ -11,14 +11,10 @@ import java.awt.Graphics;
  */
 
 public class RollingDie extends Die {
-	private static final double slowdown = 0.97D;
-	private static final double speedFactor = 0.04D;
-	private static final double speedLimit = 2.0D;
 	private static int tableLeft;
 	private static int tableRight;
 	private static int tableTop;
 	private static int tableBottom;
-	private final int dieSize = 24;
 	private int xCenter;
 	private int yCenter;
 	private double xSpeed;

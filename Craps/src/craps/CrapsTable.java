@@ -16,9 +16,9 @@ import javax.swing.border.LineBorder;
  */
 
 public class CrapsTable extends JPanel implements ActionListener {
+	private static final long serialVersionUID = -1509691651777044894L;
 	private RollingDie die1;
 	private RollingDie die2;
-	private final int delay = 20;
 	private Timer clock;
 	private CrapsGame game;
 	private DisplayPanel display;

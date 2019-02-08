@@ -93,6 +93,8 @@ public class IntroLoopsMenu {
 			case ("9"):
 				System.out.println("Thank you for choosing LIAD!");
 				shouldContinue = false;
+				kboard.close();
+				IntroLoops.kboard.close();
 				break;
 			default:
 				System.out.println("Sorry, but that isn't an option!");

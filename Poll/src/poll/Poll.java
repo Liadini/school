@@ -15,6 +15,8 @@ import javax.swing.JFrame;
 */
 
 public class Poll extends JFrame {
+	private static final long serialVersionUID = -3103432129665497482L;
+
 	public Poll() {
 		super("Vote for your favorite dessert!");
 

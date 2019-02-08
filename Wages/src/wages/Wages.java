@@ -23,6 +23,7 @@ import javax.swing.JTextField;
 */
 
 public class Wages extends JFrame implements ActionListener {
+	private static final long serialVersionUID = 5911357621804951858L;
 	private JTextField inputHours, inputRate, display;
 	private DecimalFormat money = new DecimalFormat("$0.00");
 

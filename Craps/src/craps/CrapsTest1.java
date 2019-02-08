@@ -20,6 +20,7 @@ import javax.swing.JTextField;
  */
 
 public class CrapsTest1 extends JFrame implements ActionListener {
+	private static final long serialVersionUID = 7110562897368096888L;
 	private CrapsGame game;
 	private JTextField input;
 	private JTextArea display;

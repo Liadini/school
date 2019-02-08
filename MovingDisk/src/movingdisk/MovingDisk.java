@@ -19,6 +19,7 @@ import javax.swing.Timer;
 */
 
 public class MovingDisk extends JPanel implements ActionListener {
+	private static final long serialVersionUID = -1709005630379547873L;
 	private int time;
 
 	public MovingDisk() {

@@ -99,7 +99,7 @@ public class ConditionTesterMenu {
 			System.out.print("Enter the number of 'Next Best' textbooks --> ");
 			choice2 = kboard.nextInt();
 
-			double dResult = tester.getOrderTotal(choice1, choice2);
+			double dResult = ConditionTester.getOrderTotal(choice1, choice2);
 
 			System.out.println("Your total cost is $" + dResult);
 			break;

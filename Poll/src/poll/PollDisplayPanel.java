@@ -16,6 +16,7 @@ import javax.swing.JPanel;
 */
 
 public class PollDisplayPanel extends JPanel {
+	private static final long serialVersionUID = -7284432204743169220L;
 	private String name1, name2, name3;
 	int count1, count2, count3;
 	private Image donuts, cake, pie, tie;
