@@ -62,7 +62,7 @@ public class StringToolBoxTester {
 		
 		System.out.println("\n***Testing: String caesar(String s)***");
 		System.out.println("Otms bfx f ltti rfs = " + stringTool.caesar("John was a good man", 5));
-		System.out.println("Kpio xbt b hppe nbo = " + stringTool.caesar("John was a good man", 1));
+		System.out.println("Kpio, xbt b hppe nbo. = " + stringTool.caesar("John, was a good man.", 1));
 		
 		System.out.println("\n***Testing: boolean isPalindrome(String s)***");
 		System.out.println("true = " + stringTool.isPalindrome("RaceCar"));

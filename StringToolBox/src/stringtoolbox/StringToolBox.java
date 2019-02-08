@@ -123,7 +123,7 @@ public class StringToolBox {
 		String result = "";
 	    int len = msg.length();
 	    for(int i = 0; i < len; i++){
-	    	if (Character.isWhitespace(msg.charAt(i))) {
+	    	if (!Character.isLetter(msg.charAt(i))) {
 	    		result += msg.charAt(i);
 	    		continue;
 	    	}
