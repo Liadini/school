@@ -31,4 +31,28 @@ public class LipogramAnalyzer {
 		return result;
 	}
 
+//	public String allWordsWith(char letter) {
+//		String answer = "";
+//		int i = this.s.indexOf(letter);
+//		while (i >= 0) {
+//			int start = i;
+//			while ((start >= 0) && ((Character.isLetter(this.s.charAt(start))) || (this.s.charAt(start) == '\'')
+//					|| (this.s.charAt(start) == '-'))) {
+//				start--;
+//			}
+//			int end = i;
+//			while ((end < this.s.length()) && ((Character.isLetter(this.s.charAt(end))) || (this.s.charAt(end) == '\'')
+//					|| (this.s.charAt(end) == '-'))) {
+//				end++;
+//			}
+//			String word = this.s.substring(start + 1, end);
+//			if ((!answer.contains("\n" + word + "\n")) && (!answer.startsWith(word + "\n"))
+//					&& (!answer.endsWith("\n" + word))) {
+//				answer = answer + word + "\n";
+//			}
+//			i = this.s.indexOf(letter, i + 1);
+//		}
+//		return answer;
+//	}
+
 }

@@ -37,12 +37,9 @@ public class Fraction {
 	}
 
 	public Fraction(double x) {
-		if (x < 1) {
-			num = 1;
-			denom = (int) (1.0 / x);
-		} else {
-			
-		}
+		num = (int) (x * 1000000.0);
+		denom = 1000000;
+		reduce();
 	}
 
 	public Fraction(Fraction other) { // copy constructor
