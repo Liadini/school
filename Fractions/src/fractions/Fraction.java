@@ -37,8 +37,24 @@ public class Fraction {
 	}
 
 	public Fraction(double x) {
-		num = (int) (x * 1000000.0);
-		denom = 1000000;
+		String input = "" + x;
+		int wholeNum = Integer.parseInt(input.substring(0, input.indexOf('.')));
+		input = input.substring(input.indexOf(".") + 1, input.length() - 1);
+		char firstChar = input.charAt(0);
+		int count = 0;
+		for (int i = 0; i < input.length(); i++) {
+			if (input.charAt(i) != firstChar)
+				continue;
+			count++;
+		}
+		if (count == input.length()) {
+			num = Integer.parseInt("" + firstChar) + wholeNum * 9;
+			denom = 9;
+			reduce();
+			return;
+		}
+		num = (int) (10000000.0 * x);
+		denom = 10000000;
 		reduce();
 	}
 

@@ -15,13 +15,15 @@ public class TestFractions {
 		Fraction f2 = new Fraction(7);
 		Fraction f3 = new Fraction(12, -20);
 		Fraction f4 = new Fraction(f3);
-		Fraction f5 = new Fraction(1.65);
+		Fraction f5 = new Fraction(1.333333);
+		Fraction f6 = new Fraction(1.294294294);
 
 		System.out.println("f1 = " + f1);
 		System.out.println("f2 = " + f2);
 		System.out.println("f3 = " + f3);
 		System.out.println("f4 = " + f4);
 		System.out.println("f5 = " + f5);
+		System.out.println("f6 = " + f6);
 		System.out.println();
 	}
 
