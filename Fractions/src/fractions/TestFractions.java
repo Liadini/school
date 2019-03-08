@@ -16,7 +16,7 @@ public class TestFractions {
 		Fraction f3 = new Fraction(12, -20);
 		Fraction f4 = new Fraction(f3);
 		Fraction f5 = new Fraction(1.333333);
-		Fraction f6 = new Fraction(1.294294294);
+		Fraction f6 = new Fraction(692.222222222);
 
 		System.out.println("f1 = " + f1);
 		System.out.println("f2 = " + f2);

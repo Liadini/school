@@ -37,23 +37,30 @@ public class Fraction {
 	}
 
 	public Fraction(double x) {
-		String input = "" + x;
-		int wholeNum = Integer.parseInt(input.substring(0, input.indexOf('.')));
-		input = input.substring(input.indexOf(".") + 1, input.length() - 1);
-		char firstChar = input.charAt(0);
-		int count = 0;
-		for (int i = 0; i < input.length(); i++) {
-			if (input.charAt(i) != firstChar)
-				continue;
-			count++;
-		}
-		if (count == input.length()) {
-			num = Integer.parseInt("" + firstChar) + wholeNum * 9;
-			denom = 9;
+		if (x == 0) {
+			num = 0;
 			reduce();
 			return;
 		}
-		num = (int) (10000000.0 * x);
+		String input = "" + x;
+		int beforeDec = Integer.parseInt(input.substring(0, input.indexOf('.')));
+		input = input.substring(input.indexOf(".") + 1);
+		char firstNumAfterDec = input.charAt(0);
+		int count = 0;
+		if (input.length() > 4) {
+			for (int i = 0; i < input.length(); i++) {
+				if (input.charAt(i) != firstNumAfterDec)
+					continue;
+				count++;
+			}
+			if (count == input.length()) {
+				num = Integer.parseInt("" + firstNumAfterDec) + beforeDec * 9;
+				denom = 9;
+				reduce();
+				return;
+			}
+		}
+		num = (int) (10000000.0 * x + 0.5);
 		denom = 10000000;
 		reduce();
 	}
@@ -66,10 +73,8 @@ public class Fraction {
 	// *** public methods ***
 
 	// Returns the sum of this fraction and other
-	public Fraction add(Fraction other) {
-		int newNum = num * other.denom + denom * other.num;
-		int newDenom = denom * other.denom;
-		return new Fraction(newNum, newDenom);
+	public Fraction add(Fraction f) {
+		return new Fraction(num * f.denom + denom * f.num, denom * f.denom);
 	}
 
 	// Returns the sum of this fraction and m
@@ -78,15 +83,29 @@ public class Fraction {
 	}
 
 	// Returns the product of this fraction and other
-	public Fraction multiply(Fraction other) {
-		int newNum = num * other.num;
-		int newDenom = denom * other.denom;
-		return new Fraction(newNum, newDenom);
+	public Fraction multiply(Fraction f) {
+		return new Fraction(num * f.num, denom * f.denom);
 	}
 
 	// Returns the product of this fraction and m
 	public Fraction multiply(int m) {
 		return new Fraction(num * m, denom);
+	}
+
+	public Fraction subtract(Fraction f) {
+		return new Fraction(num * f.denom - denom * f.num, denom * f.denom);
+	}
+
+	public Fraction subtract(int m) {
+		return new Fraction(num - m * denom, denom);
+	}
+
+	public Fraction divide(Fraction f) {
+		return new Fraction(num * f.denom, denom * f.num);
+	}
+
+	public Fraction divide(int m) {
+		return new Fraction(num, denom * m);
 	}
 
 	// Returns the value of this fraction as a double
