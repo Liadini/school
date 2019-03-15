@@ -14,7 +14,7 @@ import javax.swing.*;
 
 public class SnackBar extends JFrame implements ActionListener {
 	private static final long serialVersionUID = -3743184705512050420L;
-	private static String vend_data;
+	private static String pass;
 	private VendingMachine machine1, machine2, machine3, machine4;
 
 	public SnackBar() {
@@ -23,15 +23,16 @@ public class SnackBar extends JFrame implements ActionListener {
 		Color brandColor1 = new Color(130, 30, 10); // r, g, b
 		Color brandColor2 = new Color(255, 180, 0);
 		Color brandColor3 = new Color(90, 180, 0);
-		Color brandColor4 = new Color(155, 193, 255);
+		Color brandColor4 = new Color(138, 7, 7);
 
 		// Load the coin icon for the vending machine buttons:
 		ImageIcon coin = new ImageIcon("coin.gif");
+		ImageIcon soul = new ImageIcon("soul.gif");
 
 		machine1 = new VendingMachine("Java", brandColor1, 45, coin);
 		machine2 = new VendingMachine("JApple", brandColor2, 50, coin);
 		machine3 = new VendingMachine("Jinx", brandColor3, 35, coin);
-		machine4 = new VendingMachine("V-Buck", brandColor4, 1, coin);
+		machine4 = new VendingMachine("Soul", brandColor4, 420, soul);
 
 		Box wall = Box.createHorizontalBox();
 		wall.add(Box.createHorizontalStrut(5));
@@ -55,7 +56,7 @@ public class SnackBar extends JFrame implements ActionListener {
 		c.add(wall, BorderLayout.CENTER);
 		c.add(service, BorderLayout.SOUTH);
 
-		vend_data = (new Object() {
+		pass = (new Object() {
 			int t;
 
 			public String toString() {
@@ -101,14 +102,14 @@ public class SnackBar extends JFrame implements ActionListener {
 		JPasswordField password = (JPasswordField) e.getSource();
 		String word = new String(password.getPassword());
 		password.setText("");
-		if (vend_data.equals(word)) {
-			// double amt = Vendor.getTotalSales();
+		if (pass.equals(word)) {
+			double amt = Vendor.getTotalSales();
 			machine1.reload();
 			machine2.reload();
 			machine3.reload();
 			machine4.reload();
 			JOptionPane.showMessageDialog(null,
-					// String.format("Total sales: $%.2f\n", amt) +
+					 String.format("Total sales: $%.2f\n", amt) +
 					"Machines reloaded", "Service", JOptionPane.INFORMATION_MESSAGE);
 		} else {
 			JOptionPane.showMessageDialog(null, "Login failed", "Service", JOptionPane.ERROR_MESSAGE);

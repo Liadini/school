@@ -12,6 +12,8 @@ public class Vendor {
 
 	private int price, stock, deposit, change;
 
+	private static double totalSales;
+
 	public Vendor(int price, int num) {
 		this.price = price;
 		this.stock = num;
@@ -35,9 +37,10 @@ public class Vendor {
 	 * @return boolean did sale succeed
 	 */
 	public boolean makeSale() {
-		if (stock > 0 && deposit > price) {
+		if (stock > 0 && deposit >= price) {
 			stock--;
 			calculateChange();
+			totalSales += price;
 			deposit = 0;
 			return true;
 		} else {
@@ -47,11 +50,17 @@ public class Vendor {
 		}
 	}
 
+	public static double getTotalSales() {
+		double c = totalSales;
+		totalSales = 0;
+		return c;
+	}
+
 	/**
 	 * Helper method for calculating change
 	 */
 	private void calculateChange() {
-		if (stock > 0 && deposit > price)
+		if (stock > 0 && deposit >= price)
 			change = deposit - price;
 		else
 			change = deposit;
