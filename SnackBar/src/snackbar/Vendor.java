@@ -50,6 +50,7 @@ public class Vendor {
 		}
 	}
 
+	// returns total sales
 	public static double getTotalSales() {
 		double c = totalSales;
 		totalSales = 0;

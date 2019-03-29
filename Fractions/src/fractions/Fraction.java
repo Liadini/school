@@ -92,18 +92,22 @@ public class Fraction {
 		return new Fraction(num * m, denom);
 	}
 
+	// Subtracts f from this fraction
 	public Fraction subtract(Fraction f) {
 		return new Fraction(num * f.denom - denom * f.num, denom * f.denom);
 	}
 
+	// Subtracts m from this fraction
 	public Fraction subtract(int m) {
 		return new Fraction(num - m * denom, denom);
 	}
 
+	// Divides this fraction by f
 	public Fraction divide(Fraction f) {
 		return new Fraction(num * f.denom, denom * f.num);
 	}
 
+	// Divides this fraction by m
 	public Fraction divide(int m) {
 		return new Fraction(num, denom * m);
 	}
