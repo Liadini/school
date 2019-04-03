@@ -5,25 +5,13 @@ package diploma;
  * Author: Liad Hermelin
  * Date: April 1, 2018
  * Description: This lab represents a Diploma.
- * Revision 4.2
+ * Revision 4.3
 */
 
 public class Diploma {
 
-	protected String name;
-	protected String subject;
-
-	// Creates a diploma with a default name and default subject
-	public Diploma() {
-		name = "Bill Gates";
-		subject = "Computer Science";
-	}
-
-	// Creates a diploma with a name and default subject
-	public Diploma(String name) {
-		this.name = name;
-		subject = "Computer Science";
-	}
+	private String name;
+	private String subject;
 
 	// Creates a diploma with a name and subject
 	public Diploma(String name, String subject) {
