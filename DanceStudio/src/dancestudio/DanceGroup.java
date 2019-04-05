@@ -1,8 +1,9 @@
 package dancestudio;
 
-import java.awt.*;
-import java.awt.event.*;
-import javax.swing.*;
+import java.awt.Graphics;
+import java.awt.Image;
+
+import javax.swing.ImageIcon;
 
 public class DanceGroup implements StudentGroup {
 	private Dancer maleDancer;
@@ -58,8 +59,7 @@ public class DanceGroup implements StudentGroup {
 		} else if (currentState == State.MOVING) {
 			maleDancer.nextStep();
 			femaleDancer.nextStep();
-		} else if (currentState == State.STOPPED) // never happens
-		{
+		} else if (currentState == State.STOPPED) { // never happens
 			maleDancer.turnAround();
 			femaleDancer.turnAround();
 			currentState = State.READY;

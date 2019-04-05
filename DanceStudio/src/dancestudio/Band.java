@@ -9,7 +9,7 @@ import java.awt.event.*;
 import javax.swing.Timer;
 
 public class Band implements ActionListener {
-	private EasySound[] beat;
+//	private EasySound[] beat;
 	private StudentGroup students;
 	private Dance dance;
 	private Timer clock;
@@ -39,8 +39,8 @@ public class Band implements ActionListener {
 
 	public void actionPerformed(ActionEvent e) {
 		int i = dance.getBeat(beatCount);
-		if (i > 0)
-			beat[i].play();
+//		if (i > 0)
+//			beat[i].play();
 		students.makeNextStep();
 		beatCount++;
 	}
