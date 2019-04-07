@@ -5,8 +5,8 @@ import java.awt.Image;
 
 import javax.swing.ImageIcon;
 
-public class RandomHoppingGroup implements StudentGroup {
-	private RandomHopper maleDancer;
+public class AlternatorGroup implements StudentGroup {
+	private Alternator maleDancer;
 	private Image leftMansShoe, rightMansShoe;
 
 	private DanceFloor danceFloor;
@@ -18,7 +18,7 @@ public class RandomHoppingGroup implements StudentGroup {
 	private State currentState;
 
 	// Constructor
-	public RandomHoppingGroup(DanceFloor df) {
+	public AlternatorGroup(DanceFloor df) {
 		danceFloor = df;
 		leftMansShoe = (new ImageIcon("leftshoe.gif")).getImage();
 		rightMansShoe = (new ImageIcon("rightshoe.gif")).getImage();
@@ -29,10 +29,10 @@ public class RandomHoppingGroup implements StudentGroup {
 		int x = danceFloor.getWidth() / 2;
 		int y = danceFloor.getHeight() / 2;
 		if (floorDir == 0) {
-			maleDancer = new RandomHopper(x, y + Dancer.PIXELS_PER_INCH * 12, leftMansShoe, rightMansShoe);
+			maleDancer = new Alternator(x, y + Dancer.PIXELS_PER_INCH * 12, leftMansShoe, rightMansShoe);
 			maleDancer.turnLeft();
 		} else {
-			maleDancer = new RandomHopper(x, y - Dancer.PIXELS_PER_INCH * 12, leftMansShoe, rightMansShoe);
+			maleDancer = new Alternator(x, y - Dancer.PIXELS_PER_INCH * 12, leftMansShoe, rightMansShoe);
 			maleDancer.turnRight();
 		}
 		currentState = State.READY;

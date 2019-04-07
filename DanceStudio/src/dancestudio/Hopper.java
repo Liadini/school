@@ -5,8 +5,7 @@ package dancestudio;
 import java.awt.Image;
 
 public class Hopper extends Biped {
-	private int stepLength;
-	private int stepsCount;
+	private int stepsCount, stepLength;
 
 	// Constructor
 	public Hopper(int x, int y, Image leftPic, Image rightPic) {

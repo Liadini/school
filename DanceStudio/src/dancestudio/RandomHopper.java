@@ -11,23 +11,21 @@ public class RandomHopper extends Hopper {
 	public RandomHopper(int x, int y, Image leftPic, Image rightPic) {
 		super(x, y, leftPic, rightPic);
 		stepLength = PIXELS_PER_INCH * 12;
+		r = new Random();
 	}
 
 	// Makes next step
 	@Override
 	public void nextStep() {
-		switch(r.nextInt(3)) {
+		switch(r.nextInt(4)) {
 		case 0:
-			getLeftFoot().turn(90);
-			getRightFoot().turn(90);
+			turnLeft();
 			break;
 		case 1:
-			getLeftFoot().turn(180);
-			getRightFoot().turn(180);
+			turnRight();
 			break;
 		case 2:
-			getLeftFoot().turn(270);
-			getRightFoot().turn(270);
+			turnAround();
 			break;
 		case 3:
 			getLeftFoot().moveForward(2 * stepLength);

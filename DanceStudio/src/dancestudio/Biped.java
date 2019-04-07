@@ -56,7 +56,7 @@ public abstract class Biped {
 		leftFoot.moveForward(PIXELS_PER_INCH * 8);
 	}
 
-	// Turns this Byped 180 degrees
+	// Turns this Biped 180 degrees
 	public void turnAround() {
 		leftFoot.turn(180);
 		rightFoot.turn(180);
