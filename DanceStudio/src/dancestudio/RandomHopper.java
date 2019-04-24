@@ -28,11 +28,10 @@ public class RandomHopper extends Hopper {
 			turnAround();
 			break;
 		case 3:
-			getLeftFoot().moveForward(2 * stepLength);
-			getRightFoot().moveForward(2 * stepLength);
 			break;
 		}
-
+		getLeftFoot().moveForward(2 * stepLength);
+		getRightFoot().moveForward(2 * stepLength);
 		stepsCount++;
 	}
 
