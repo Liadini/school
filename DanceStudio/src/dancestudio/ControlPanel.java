@@ -7,6 +7,8 @@ import java.awt.event.*;
 import javax.swing.*;
 
 public class ControlPanel extends JPanel implements ActionListener {
+	private static final long serialVersionUID = 5731107558003240493L;
+
 	private static Dance[] dances = { new Aerobics(), new Waltz(), new Rumba(), new Chacha(), new Salsa() };
 
 	private StudentGroup students;

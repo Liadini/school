@@ -1,11 +1,8 @@
 package dancestudio;
 
-//  This class processes the timer events, generates the "beat"
-//  for the dance as described by the parameters passed to its play method,
-// and calls the DanceModel's nextBeat method when the timer fires.
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
-import java.awt.*;
-import java.awt.event.*;
 import javax.swing.Timer;
 
 public class Band implements ActionListener {

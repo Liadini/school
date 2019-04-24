@@ -7,6 +7,8 @@ import java.awt.Color;
 import javax.swing.JPanel;
 
 public class DanceFloor extends JPanel {
+	private static final long serialVersionUID = -7863256056946209401L;
+
 	// Constructor
 	public DanceFloor() {
 		setBackground(Color.WHITE);

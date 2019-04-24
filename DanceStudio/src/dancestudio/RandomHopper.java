@@ -5,7 +5,6 @@ import java.util.Random;
 
 public class RandomHopper extends Hopper {
 	private int stepLength;
-	private int stepsCount;
 	private Random r;
 
 	public RandomHopper(int x, int y, Image leftPic, Image rightPic) {
@@ -32,7 +31,6 @@ public class RandomHopper extends Hopper {
 		}
 		getLeftFoot().moveForward(2 * stepLength);
 		getRightFoot().moveForward(2 * stepLength);
-		stepsCount++;
 	}
 
 }
