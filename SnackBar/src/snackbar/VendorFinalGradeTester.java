@@ -105,12 +105,12 @@ public class VendorFinalGradeTester
   		final int TOTALPOINTS = 10;
   		
   		// test prices
-  		final int TESTPRICE00 = 0;
-  		final int TETSPRICE10 = 10;
+//  		final int TESTPRICE00 = 0;
+//  		final int TETSPRICE10 = 10;
   		
   		// test stock counts
-  		final int TESTSTOCK00 = 0;
-  		final int TESTSTOCK10 = 10;
+//  		final int TESTSTOCK00 = 0;
+//  		final int TESTSTOCK10 = 10;
   	    
   		// test counters
   		int testCount = 0;  	

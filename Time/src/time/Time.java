@@ -13,8 +13,6 @@ public class Time {
 	private int hours, mins;
 
 	private boolean AM_PM;
-	private boolean isAM;
-
 	// creates a time of 0:0
 	public Time() {
 		hours = 0;

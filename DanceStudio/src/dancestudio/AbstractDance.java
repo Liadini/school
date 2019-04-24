@@ -26,6 +26,7 @@ public abstract class AbstractDance implements Dance {
 		return rhythm[i % rhythm.length];
 	}
 
+	@Override
 	public String toString() {
 		return getName();
 	}

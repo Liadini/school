@@ -13,6 +13,7 @@ import javax.swing.*;
 */
 
 public class VendingMachine extends JPanel implements ActionListener {
+	private static final long serialVersionUID = 5075005343288330036L;
 	private static final int FULL_STOCK = 5;
 	private JButton deposit25c, deposit10c, deposit5c, go;
 	private JTextField display;

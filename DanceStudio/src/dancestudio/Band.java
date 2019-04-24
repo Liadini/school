@@ -35,7 +35,7 @@ public class Band implements ActionListener {
 	}
 
 	public void actionPerformed(ActionEvent e) {
-		int i = dance.getBeat(beatCount);
+//		int i = dance.getBeat(beatCount);
 //		if (i > 0)
 //			beat[i].play();
 		students.makeNextStep();
