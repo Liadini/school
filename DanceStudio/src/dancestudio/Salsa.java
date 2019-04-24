@@ -2,7 +2,7 @@ package dancestudio;
 
 public class Salsa extends AbstractDance {
 
-	private static DanceStep[] steps = { new DanceStep(0, 50, 0, 0, 0, 0, 0, 6), new DanceStep(0, 0, 0, 0, 0, 0, 0, -6),
+	private static DanceStep[] steps = {  new DanceStep(0, 0, 0, 0, 0, 0, 0, -6),
 			new DanceStep(0, -50, 0, 0, 0, 0, 0, 0), null, new DanceStep(0, 0, 0, -6, 0, -50, 0, 0),
 			new DanceStep(6, 0, 0, 0, 0, 0, 0, 0), new DanceStep(0, 0, 0, 0, 0, 50, 0, 0), null, };
 

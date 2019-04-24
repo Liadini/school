@@ -1,15 +1,20 @@
 package dancestudio;
 
 // Represents a control panel for a dance group
+import java.awt.GridLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
-import java.awt.*;
-import java.awt.event.*;
-import javax.swing.*;
+import javax.swing.ImageIcon;
+import javax.swing.JButton;
+import javax.swing.JComboBox;
+import javax.swing.JPanel;
 
 public class ControlPanel extends JPanel implements ActionListener {
 	private static final long serialVersionUID = 5731107558003240493L;
 
-	private static Dance[] dances = { new Aerobics(), new Waltz(), new Rumba(), new Chacha(), new Salsa() };
+	private static Dance[] dances = { new Aerobics(), new Waltz(), new Rumba(), new Chacha(), new Salsa(),
+			new MyDance() };
 
 	private StudentGroup students;
 	private Band music;
